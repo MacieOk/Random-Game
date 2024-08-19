@@ -31,3 +31,19 @@ To install the library, you can clone the repository and install it locally usin
 git clone https://github.com/your-username/random_games.git
 cd random_games
 pip install -e .
+
+## **Usage**
+
+import numpy as np
+from random_games.tableau_manager import TableauManager
+
+random_numbers = np.random.randint(1, 10, size=100)
+tableau_manager = TableauManager(random_numbers)
+young_tableau = tableau_manager.insertion_tableau
+
+for row in young_tableau:
+    print(row)
+
+
+## **Publication**
+The results derived from the code in this project were used in a scientific publication. You can find the full paper here: https://arxiv.org/abs/2302.03762
