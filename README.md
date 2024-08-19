@@ -35,6 +35,7 @@ pip install -e .
 
 ## **Usage**
 
+```python
 import numpy as np
 from random_games.tableau_manager import TableauManager
 
@@ -44,7 +45,7 @@ young_tableau = tableau_manager.insertion_tableau
 
 for row in young_tableau:
     print(row)
-
+```
 
 ## **Publication**
 The results derived from the code in this project were used in a scientific publication. You can find the full paper here: https://arxiv.org/abs/2302.03762
