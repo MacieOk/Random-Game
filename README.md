@@ -30,7 +30,7 @@ To install the library, you can clone the repository and install it locally usin
 ```bash
 git clone https://github.com/your-username/random_games.git
 cd random_games
-pip install -e .
+pip install -e . ```
 
 ## **Usage**
 
