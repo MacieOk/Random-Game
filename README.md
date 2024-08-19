@@ -34,7 +34,7 @@ pip install -e .
 ```
 
 ## **Usage**
-
+You can generate a Young tableau from a sequence of random numbers and visualize it:
 ```python
 import numpy as np
 from random_games.tableau_manager import TableauManager
@@ -46,6 +46,31 @@ young_tableau = tableau_manager.insertion_tableau
 for row in young_tableau:
     print(row)
 ```
+Simulate the Jeu de Tacquin game to find the optimal path in the Young tableau:
+```python
+from random_games.game_logic import JeuDeTacquin
+
+jeu = JeuDeTacquin()
+path = jeu.find_path(young_tableau)
+print("Path found:", path)
+```
+Generate a comprehensive report that includes the tableau and the path visualization:
+```python
+from random_games.html_report_generator import HTMLReportGenerator
+
+title = "Young Tableau and Path Analysis"
+content = [
+    "This report provides an in-depth analysis of the generated Young tableau and the path found using the Jeu de Tacquin algorithm.",
+    "<img src='example_path.jpg' alt='Young Tableau with Path' />"
+]
+
+report_generator = HTMLReportGenerator()
+report = report_generator.generate_report(title, content)
+
+with open("example_report.html", "w") as file:
+    file.write(report)
+```
+For more check folder examples. 
 
 ## **Publication**
 The results derived from the code in this project were used in a scientific publication. You can find the full paper here: https://arxiv.org/abs/2302.03762
